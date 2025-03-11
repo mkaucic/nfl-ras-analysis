@@ -1,0 +1,23 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "autopep8",
+    "python.pythonPath": "./venv/bin/python",
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
