@@ -31,6 +31,23 @@ const PlayerTable = ({ players }) => {
   );
   const totalPages = Math.ceil(players.length / playersPerPage);
 
+  const getRASColor = (ras) => {
+    // If RAS is not a valid number, return gray
+    if (!ras || isNaN(ras)) return "#cccccc";
+
+    // Map RAS (0-10) to a color gradient (red to green)
+    // For a pastel look, we'll use lighter colors
+    if (ras >= 9) return "#c6f6d5"; // Light green for excellent
+    if (ras >= 8) return "#d4edd4"; // Pale green for very good
+    if (ras >= 7) return "#e2f5d3"; // Light yellowish green for good
+    if (ras >= 6) return "#f0fad2"; // Very light yellow-green for above average
+    if (ras >= 5) return "#fafad2"; // Light yellow for average
+    if (ras >= 4) return "#faecd2"; // Light orange-yellow for below average
+    if (ras >= 3) return "#faded2"; // Light orange for poor
+    if (ras >= 2) return "#fad0d2"; // Light salmon for very poor
+    return "#fac2c2"; // Light red for terrible
+  };
+
   return (
     <div>
       <div className="overflow-x-auto">
@@ -118,7 +135,13 @@ const PlayerTable = ({ players }) => {
                   )}
                 </td>
                 <td className="py-2 px-4">{player.Position}</td>
-                <td className="py-2 px-4">
+                <td
+                  className="py-2 px-4"
+                  style={{
+                    backgroundColor: getRASColor(player.RAS_numeric),
+                    fontWeight: "medium",
+                  }}
+                >
                   {player.RAS_numeric ? player.RAS_numeric.toFixed(2) : "N/A"}
                 </td>
                 <td className="py-2 px-4">{player.Pro_Bowls_numeric}</td>
