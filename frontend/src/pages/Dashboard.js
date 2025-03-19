@@ -34,30 +34,32 @@ const Dashboard = () => {
         console.log("Data loaded successfully:", data.length, "records");
         setPlayersData(data);
 
-        // Extract unique positions
+        // Extract unique positions, excluding "DB"
         const uniquePositions = [
           ...new Set(data.map((player) => player.Position)),
-        ];
+        ].filter((pos) => pos !== "DB");
         setPositions(["All", ...uniquePositions]);
 
-        // Calculate position stats
-        const stats = uniquePositions.map((position) => {
-          const posPlayers = data.filter((p) => p.Position === position);
-          const avgRAS =
-            posPlayers.reduce((sum, p) => sum + (p.RAS_numeric || 0), 0) /
-            posPlayers.length;
-          const totalProBowls = posPlayers.reduce(
-            (sum, p) => sum + (p.Pro_Bowls_numeric || 0),
-            0
-          );
+        // Calculate position stats, also excluding "DB"
+        const stats = uniquePositions
+          .filter((position) => position !== "DB") // Extra filter to be safe
+          .map((position) => {
+            const posPlayers = data.filter((p) => p.Position === position);
+            const avgRAS =
+              posPlayers.reduce((sum, p) => sum + (p.RAS_numeric || 0), 0) /
+              posPlayers.length;
+            const totalProBowls = posPlayers.reduce(
+              (sum, p) => sum + (p.Pro_Bowls_numeric || 0),
+              0
+            );
 
-          return {
-            position,
-            avgRAS: avgRAS.toFixed(2),
-            playerCount: posPlayers.length,
-            totalProBowls,
-          };
-        });
+            return {
+              position,
+              avgRAS: avgRAS.toFixed(2),
+              playerCount: posPlayers.length,
+              totalProBowls,
+            };
+          });
 
         setPositionStats(stats);
         setLoading(false);
@@ -74,7 +76,7 @@ const Dashboard = () => {
 
   const filteredPlayers =
     positionFilter === "All"
-      ? playersData
+      ? playersData.filter((player) => player.Position !== "DB")
       : playersData.filter((player) => player.Position === positionFilter);
 
   if (loading) {
