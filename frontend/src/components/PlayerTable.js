@@ -93,14 +93,29 @@ const PlayerTable = ({ players }) => {
                 className={index % 2 === 0 ? "bg-gray-100" : "bg-white"}
               >
                 <td className="py-2 px-4">
-                  <a
-                    href={player.Profile_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    {player.Player}
-                  </a>
+                  {player.Profile_URL ? (
+                    <a
+                      href={player.Profile_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {player.Player}
+                    </a>
+                  ) : (
+                    // If we don't have a Profile_URL, create a reasonable guess at the URL
+                    <a
+                      href={`https://ras.football/search/${player.Player.toLowerCase().replace(
+                        /\s+/g,
+                        "-"
+                      )}/`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {player.Player}
+                    </a>
+                  )}
                 </td>
                 <td className="py-2 px-4">{player.Position}</td>
                 <td className="py-2 px-4">
