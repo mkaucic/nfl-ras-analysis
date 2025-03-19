@@ -125,7 +125,26 @@ const Dashboard = () => {
                 dataKey="Pro_Bowls_numeric"
                 name="Pro Bowls"
               />
-              <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+              <Tooltip
+                cursor={{ strokeDasharray: "3 3" }}
+                formatter={(value, name) => [value, name]}
+                content={({ active, payload }) => {
+                  if (active && payload && payload.length) {
+                    const player = payload[0].payload;
+                    return (
+                      <div className="bg-white p-3 border rounded shadow-md">
+                        <p className="font-bold">{player.Player}</p>
+                        <p>Position: {player.Position}</p>
+                        <p>RAS: {player.RAS_numeric?.toFixed(2) || "N/A"}</p>
+                        <p>Pro Bowls: {player.Pro_Bowls_numeric || "N/A"}</p>
+                        <p>College: {player.College || "N/A"}</p>
+                        <p>Draft: {player.Draft || "N/A"}</p>
+                      </div>
+                    );
+                  }
+                  return null;
+                }}
+              />
               <Legend />
               <Scatter
                 name="Players"
