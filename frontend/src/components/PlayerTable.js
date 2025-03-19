@@ -69,8 +69,21 @@ const PlayerTable = ({ players }) => {
                 {sortField === "Pro_Bowls_numeric" &&
                   (sortDirection === "asc" ? "↑" : "↓")}
               </th>
-              <th className="py-2 px-4">College</th>
-              <th className="py-2 px-4">Draft</th>
+              <th
+                className="py-2 px-4 cursor-pointer"
+                onClick={() => handleSort("College")}
+              >
+                College{" "}
+                {sortField === "College" &&
+                  (sortDirection === "asc" ? "↑" : "↓")}
+              </th>
+              <th
+                className="py-2 px-4 cursor-pointer"
+                onClick={() => handleSort("Draft")}
+              >
+                Draft Year{" "}
+                {sortField === "Draft" && (sortDirection === "asc" ? "↑" : "↓")}
+              </th>
             </tr>
           </thead>
           <tbody className="text-gray-700">
