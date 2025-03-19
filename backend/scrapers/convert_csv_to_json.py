@@ -80,6 +80,12 @@ if not pro_bowl_found:
     print("No Pro Bowls column found. Adding empty column.")
     df['Pro_Bowls_numeric'] = float('nan')
 
+# Check for draft information
+if 'Draft Year' in df.columns:
+    df['Draft'] = df['Draft Year']
+elif 'Draft' not in df.columns:
+    df['Draft'] = 'Unknown'
+
 # Select columns for export, ensuring they exist
 export_cols = []
 for col in ['Player', 'Position', 'RAS_numeric', 'Pro_Bowls_numeric', 'College', 'Draft', 'Profile_URL']:
