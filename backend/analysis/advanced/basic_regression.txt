@@ -4,7 +4,7 @@ Dep. Variable:      Pro_Bowls_numeric   R-squared:                       0.006
 Model:                            OLS   Adj. R-squared:                  0.005
 Method:                 Least Squares   F-statistic:                     4.842
 Date:                Thu, 20 Mar 2025   Prob (F-statistic):             0.0280
-Time:                        14:52:20   Log-Likelihood:                -1900.3
+Time:                        15:55:16   Log-Likelihood:                -1900.3
 No. Observations:                 841   AIC:                             3805.
 Df Residuals:                     839   BIC:                             3814.
 Df Model:                           1                                         

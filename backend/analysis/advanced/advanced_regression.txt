@@ -1,32 +1,42 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:      Pro_Bowls_numeric   R-squared:                       0.012
-Model:                            OLS   Adj. R-squared:                  0.006
-Method:                 Least Squares   F-statistic:                     1.989
-Date:                Thu, 20 Mar 2025   Prob (F-statistic):             0.0779
-Time:                        14:52:20   Log-Likelihood:                -1897.7
-No. Observations:                 841   AIC:                             3807.
-Df Residuals:                     835   BIC:                             3836.
-Df Model:                           5                                         
+Dep. Variable:      Pro_Bowls_numeric   R-squared:                       0.038
+Model:                            OLS   Adj. R-squared:                  0.022
+Method:                 Least Squares   F-statistic:                     2.353
+Date:                Thu, 20 Mar 2025   Prob (F-statistic):            0.00336
+Time:                        15:55:16   Log-Likelihood:                -1886.3
+No. Observations:                 841   AIC:                             3803.
+Df Residuals:                     826   BIC:                             3874.
+Df Model:                          14                                         
 Covariance Type:            nonrobust                                         
 ===============================================================================
                   coef    std err          t      P>|t|      [0.025      0.975]
 -------------------------------------------------------------------------------
-const           2.3051      0.295      7.815      0.000       1.726       2.884
-RAS_numeric     0.0818      0.037      2.240      0.025       0.010       0.153
-pos_CB         -0.4781      0.260     -1.837      0.067      -0.989       0.033
-pos_DB      -3.106e-17   1.29e-16     -0.241      0.810   -2.84e-16    2.22e-16
-pos_DE         -0.2807      0.263     -1.068      0.286      -0.797       0.235
-pos_DT          0.2095      0.327      0.640      0.522      -0.433       0.852
-pos_FB         -0.2921      0.531     -0.550      0.582      -1.334       0.750
+const           2.1656      0.269      8.053      0.000       1.638       2.693
+RAS_numeric     0.0810      0.036      2.223      0.027       0.009       0.152
+pos_CB         -0.3323      0.240     -1.386      0.166      -0.803       0.138
+pos_DB       6.033e-17   1.56e-16      0.387      0.699   -2.46e-16    3.67e-16
+pos_DE         -0.1347      0.243     -0.555      0.579      -0.611       0.342
+pos_DT          0.3551      0.301      1.181      0.238      -0.235       0.945
+pos_FB         -0.1479      0.487     -0.303      0.762      -1.105       0.809
+pos_FS         -0.0170      0.353     -0.048      0.962      -0.709       0.675
+pos_LB         -0.1982      0.238     -0.832      0.406      -0.666       0.270
+pos_OC          0.8730      0.387      2.253      0.025       0.112       1.634
+pos_OG          1.0634      0.309      3.442      0.001       0.457       1.670
+pos_OT          0.6711      0.291      2.310      0.021       0.101       1.241
+pos_QB          0.0400      0.303      0.132      0.895      -0.555       0.635
+pos_RB         -0.4163      0.252     -1.653      0.099      -0.911       0.078
+pos_SS          0.4099      0.400      1.024      0.306      -0.376       1.196
+pos_TE         -0.0043      0.316     -0.014      0.989      -0.625       0.617
+pos_WR          0.0039      0.238      0.016      0.987      -0.464       0.471
 ==============================================================================
-Omnibus:                      274.472   Durbin-Watson:                   1.767
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              756.406
-Skew:                           1.667   Prob(JB):                    5.60e-165
-Kurtosis:                       6.236   Cond. No.                     1.42e+18
+Omnibus:                      264.094   Durbin-Watson:                   1.776
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              717.025
+Skew:                           1.605   Prob(JB):                    2.00e-156
+Kurtosis:                       6.187   Cond. No.                     5.66e+17
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The smallest eigenvalue is 2.67e-32. This might indicate that there are
+[2] The smallest eigenvalue is 1.69e-31. This might indicate that there are
 strong multicollinearity problems or that the design matrix is singular.

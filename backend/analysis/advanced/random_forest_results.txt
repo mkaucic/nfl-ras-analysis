@@ -1,20 +1,30 @@
-Random Forest Accuracy: 0.5687
+Random Forest Accuracy: 0.5118
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.44      0.47      0.46        80
-           1       0.66      0.63      0.64       131
+           0       0.37      0.41      0.39        80
+           1       0.61      0.57      0.59       131
 
-    accuracy                           0.57       211
-   macro avg       0.55      0.55      0.55       211
-weighted avg       0.58      0.57      0.57       211
+    accuracy                           0.51       211
+   macro avg       0.49      0.49      0.49       211
+weighted avg       0.52      0.51      0.52       211
 
 Feature Importance:
-       Feature  Importance
-0  RAS_numeric    0.960389
-4       pos_DT    0.013659
-1       pos_CB    0.011676
-3       pos_DE    0.007623
-5       pos_FB    0.006653
-2       pos_DB    0.000000
+        Feature  Importance
+0   RAS_numeric    0.893514
+4        pos_DT    0.011921
+15       pos_WR    0.011181
+1        pos_CB    0.008950
+10       pos_OT    0.008171
+9        pos_OG    0.007985
+7        pos_LB    0.007436
+14       pos_TE    0.007157
+12       pos_RB    0.007016
+11       pos_QB    0.006996
+13       pos_SS    0.006440
+3        pos_DE    0.006336
+8        pos_OC    0.006123
+5        pos_FB    0.005540
+6        pos_FS    0.005233
+2        pos_DB    0.000000

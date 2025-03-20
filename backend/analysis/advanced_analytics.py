@@ -85,7 +85,7 @@ def perform_advanced_analysis():
     pos_dummy_cols = [col for col in regression_df.columns if col.startswith('pos_')]
     if pos_dummy_cols:
         # Take fewer dummy variables to avoid potential issues
-        advanced_cols.extend(pos_dummy_cols[:min(5, len(pos_dummy_cols)-1)])  # Exclude one for the dummy variable trap
+        advanced_cols.extend(pos_dummy_cols)  # Exclude one for the dummy variable trap
     
     # Add draft round if available
     if 'draft_round' in regression_df.columns:
@@ -121,7 +121,7 @@ def perform_advanced_analysis():
     # Add position dummies if available
     if pos_dummy_cols:
         # Limit the number of features to avoid issues
-        ml_features.extend(pos_dummy_cols[:min(5, len(pos_dummy_cols))])
+        ml_features.extend(pos_dummy_cols)
     
     # Add draft round if available
     if 'draft_round' in regression_df.columns and not regression_df['draft_round'].isna().all():
@@ -219,7 +219,7 @@ def perform_advanced_analysis():
                 
                 # Add position dummies if needed
                 if pos_dummy_cols and len(pos_dummy_cols) > 0:
-                    for pos_dummy in pos_dummy_cols[:min(5, len(pos_dummy_cols))]:
+                    for pos_dummy in pos_dummy_cols:
                         if pos_dummy in X_ml.columns:  # Only add if it was used in training
                             pos_name = pos_dummy.split('_')[1]
                             sample_data[pos_dummy] = 1 if pos_name == position else 0
