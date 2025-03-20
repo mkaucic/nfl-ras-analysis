@@ -1,0 +1,32 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      Pro_Bowls_numeric   R-squared:                       0.012
+Model:                            OLS   Adj. R-squared:                  0.006
+Method:                 Least Squares   F-statistic:                     1.989
+Date:                Thu, 20 Mar 2025   Prob (F-statistic):             0.0779
+Time:                        14:52:20   Log-Likelihood:                -1897.7
+No. Observations:                 841   AIC:                             3807.
+Df Residuals:                     835   BIC:                             3836.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const           2.3051      0.295      7.815      0.000       1.726       2.884
+RAS_numeric     0.0818      0.037      2.240      0.025       0.010       0.153
+pos_CB         -0.4781      0.260     -1.837      0.067      -0.989       0.033
+pos_DB      -3.106e-17   1.29e-16     -0.241      0.810   -2.84e-16    2.22e-16
+pos_DE         -0.2807      0.263     -1.068      0.286      -0.797       0.235
+pos_DT          0.2095      0.327      0.640      0.522      -0.433       0.852
+pos_FB         -0.2921      0.531     -0.550      0.582      -1.334       0.750
+==============================================================================
+Omnibus:                      274.472   Durbin-Watson:                   1.767
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              756.406
+Skew:                           1.667   Prob(JB):                    5.60e-165
+Kurtosis:                       6.236   Cond. No.                     1.42e+18
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 2.67e-32. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

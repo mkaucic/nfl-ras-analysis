@@ -1,0 +1,25 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      Pro_Bowls_numeric   R-squared:                       0.006
+Model:                            OLS   Adj. R-squared:                  0.005
+Method:                 Least Squares   F-statistic:                     4.842
+Date:                Thu, 20 Mar 2025   Prob (F-statistic):             0.0280
+Time:                        14:52:20   Log-Likelihood:                -1900.3
+No. Observations:                 841   AIC:                             3805.
+Df Residuals:                     839   BIC:                             3814.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const           2.2455      0.288      7.790      0.000       1.680       2.811
+RAS_numeric     0.0797      0.036      2.200      0.028       0.009       0.151
+==============================================================================
+Omnibus:                      274.672   Durbin-Watson:                   1.757
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              755.384
+Skew:                           1.669   Prob(JB):                    9.34e-165
+Kurtosis:                       6.226   Cond. No.                         29.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

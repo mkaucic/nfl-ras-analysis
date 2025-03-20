@@ -1,0 +1,20 @@
+Logistic Regression Accuracy: 0.6256
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.54      0.09      0.15        80
+           1       0.63      0.95      0.76       131
+
+    accuracy                           0.63       211
+   macro avg       0.58      0.52      0.46       211
+weighted avg       0.60      0.63      0.53       211
+
+Feature Importance:
+       Feature  Importance
+4       pos_DT    0.835716
+5       pos_FB    0.487778
+1       pos_CB    0.416128
+3       pos_DE    0.129684
+0  RAS_numeric    0.039662
+2       pos_DB    0.000000
