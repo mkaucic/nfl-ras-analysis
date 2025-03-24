@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import PlayerDetails from "./pages/PlayerDetails";
-import About from "./pages/About";
 import Analytics from "./pages/Analytics";
+import Insights from "./pages/Insights";
+import About from "./pages/About";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/player/:playerId" element={<PlayerDetails />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/insights" element={<Insights />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>

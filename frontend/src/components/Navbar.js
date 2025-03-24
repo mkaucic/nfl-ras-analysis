@@ -13,7 +13,10 @@ const Navbar = () => {
             Dashboard
           </Link>
           <Link to="/analytics" className="hover:text-blue-200">
-            Advanced Analytics
+            Analytics
+          </Link>
+          <Link to="/insights" className="hover:text-blue-200">
+            Insights
           </Link>
           <Link to="/about" className="hover:text-blue-200">
             About
