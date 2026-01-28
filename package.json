@@ -4,7 +4,7 @@
   "description": "NFL RAS Analysis Frontend",
   "private": true,
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm install --legacy-peer-deps && npm run build",
     "start": "cd frontend && npm start",
     "test": "cd frontend && npm test"
   },
