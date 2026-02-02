@@ -49,7 +49,7 @@ const Dashboard = () => {
               posPlayers.length;
             const totalProBowls = posPlayers.reduce(
               (sum, p) => sum + (p.Pro_Bowls_numeric || 0),
-              0
+              0,
             );
 
             return {
@@ -68,7 +68,7 @@ const Dashboard = () => {
         setLoading(false);
         // Show user-friendly error message
         alert(
-          "Failed to load player data. Please check the console for details."
+          "Failed to load player data. Please check the console for details.",
         );
       });
   }, []);

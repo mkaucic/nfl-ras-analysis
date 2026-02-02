@@ -14,7 +14,7 @@ const PositionInsights = ({ positionData }) => {
 
   // Sort positions by player count (most common first)
   const sortedPositions = [...positionData].sort(
-    (a, b) => b.PlayerCount - a.PlayerCount
+    (a, b) => b.PlayerCount - a.PlayerCount,
   );
 
   return (
@@ -61,7 +61,7 @@ const PositionInsights = ({ positionData }) => {
             <ResponsiveContainer width="100%" height={300}>
               <BarChart
                 data={sortedPositions.sort(
-                  (a, b) => b.MultiProBowlRate - a.MultiProBowlRate
+                  (a, b) => b.MultiProBowlRate - a.MultiProBowlRate,
                 )}
               >
                 <CartesianGrid strokeDasharray="3 3" />
@@ -105,8 +105,8 @@ const PositionInsights = ({ positionData }) => {
             {selectedPosition.AvgRAS > 7
               ? " significantly"
               : selectedPosition.AvgRAS > 5
-              ? " moderately"
-              : " slightly"}
+                ? " moderately"
+                : " slightly"}
             more likely to make multiple Pro Bowls, with an average RAS of{" "}
             {selectedPosition.AvgRAS.toFixed(2)}
             among Pro Bowlers.

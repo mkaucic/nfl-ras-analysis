@@ -26,7 +26,7 @@ const PlayerTable = ({ players }) => {
   const indexOfFirstPlayer = indexOfLastPlayer - playersPerPage;
   const currentPlayers = sortedPlayers.slice(
     indexOfFirstPlayer,
-    indexOfLastPlayer
+    indexOfLastPlayer,
   );
   const totalPages = Math.ceil(players.length / playersPerPage);
 
@@ -123,7 +123,7 @@ const PlayerTable = ({ players }) => {
                     <a
                       href={`https://ras.football/search/${player.Player.toLowerCase().replace(
                         /\s+/g,
-                        "-"
+                        "-",
                       )}/`}
                       target="_blank"
                       rel="noopener noreferrer"
