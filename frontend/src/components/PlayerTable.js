@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const PlayerTable = ({ players }) => {
   const [sortField, setSortField] = useState("RAS_numeric");

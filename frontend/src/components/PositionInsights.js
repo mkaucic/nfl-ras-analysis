@@ -6,11 +6,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
-  ScatterChart,
-  Scatter,
-  ZAxis,
 } from "recharts";
 
 const PositionInsights = ({ positionData }) => {
