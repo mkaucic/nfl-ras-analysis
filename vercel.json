@@ -1,13 +1,13 @@
 {
-  "installCommand": "npm ci --legacy-peer-deps",
+  "installCommand": "cd frontend && npm ci --legacy-peer-deps",
   "builds": [
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build",
-        "installCommand": "npm ci --legacy-peer-deps",
-        "buildCommand": "npm run build"
+        "installCommand": "cd frontend && npm ci --legacy-peer-deps",
+        "buildCommand": "cd frontend && npm run build"
       }
     }
   ],
