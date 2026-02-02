@@ -23,3 +23,5 @@ npm-debug.log*
 # Data
 /backend/data/*.csv
 /backend/data/*.json
+.vercel
+.env*.local
